@@ -1,20 +1,22 @@
 {
-  "name": "highlightjs-language",
+  "name": "highlightjs-curl",
   "version": "0.1.0",
   "author": "John Foster",
-  "description": "A new language template set up when creating a language definition for highlightjs",
-  "main": "language.js",
+  "description": "Support for using highlight.js to syntax highlight cURL commands.",
+  "main": "curl.js",
   "scripts": {
     "test": "jasmine"
   },
   "files": [
-    "language.js"
+    "curl.js"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jf990/highlightjs-language-template.git"
+    "url": "https://github.com/jf990/highlightjs-curl.git"
   },
   "keywords": [
+    "curl",
+    "http",
     "javascript",
     "highlight.js",
     "highlightjs",
@@ -22,9 +24,9 @@
   ],
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/jf990/highlightjs-language-template/issues"
+    "url": "https://github.com/jf990/highlightjs-curl/issues"
   },
-  "homepage": "https://github.com/jf990/highlightjs-language-template#readme",
+  "homepage": "https://github.com/jf990/highlightjs-curl#readme",
   "devDependencies": {
     "highlight.js": "^9.15.10",
     "jasmine": "^3.4.0"
