@@ -1,0 +1,8 @@
+<span class="hljs-comment">/* Highlight.js test for some new language */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">parameter</span>) </span>{
+    <span class="hljs-keyword">if</span> (parameter != <span class="hljs-number">-1</span>) {
+        <span class="hljs-keyword">return</span> parameter;
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+}

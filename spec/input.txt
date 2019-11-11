@@ -1,0 +1,8 @@
+/* Highlight.js test for some new language */
+function myFunction(parameter) {
+    if (parameter != -1) {
+        return parameter;
+    } else {
+        return 0;
+    }
+}
