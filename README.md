@@ -1,23 +1,63 @@
-# highlightjs-language-template
+# highlightjs-curl
 
-A new language template set up when creating a language definition for highlightjs. See https://highlightjs.org/ for more information about highlight.js.
+Support for using `highlight.js` to syntax highlight cURL commands. See https://highlightjs.org/ for more information about highlight.js.
+
+See https://curl.haxx.se/docs/manpage.html or in your shell use `curl --help` for more information about cURL.
 
 ## Usage
 
-This is a GitHub repository template for defining a new language for use with [highlightjs](https://highlightjs.org/). Follow [Language definition guide](https://highlightjs.readthedocs.io/en/latest/language-guide.html) to learn how to define a new language or improve an existing one.
+Include the `highlight.js` script package in your webpage or node app, load this module and register it with `hljs`. Follow instructions at [highlightjs](https://highlightjs.org/) to learn how to include the library and CSS.
 
-Create a new repository using this template.
+If you're not using a build system and just want to embed this in your webpage:
 
-Update the README file to explain how to use your language.
+```html
+<script type="text/javascript" src="/path/to/highlight.pack.js"></script>
+<script type="text/javascript" src="/path/to/highlightjs-curl/curl.js"></script>
+<script type="text/javascript">
+    hljs.registerLanguage('curl', window.hljsDefineCurl);
+    hljs.initHighlightingOnLoad();
+</script>
+```
 
-Update `package.json`
+If you're using webpack / rollup / browserify / node:
 
-Install the dependencies with `npm install`.
+```javascript
+var hljs = require('highlightjs');
+var hljsDefineCUrl = require('highlightjs-curl');
 
-Rename `language.js` to your language name and follow the [Language definition guide](https://highlightjs.readthedocs.io/en/latest/language-guide.html) to learn how to define a new language. Typically we start with an existing language that is close and alter that JavaScript code to the new language.
+hljsDefineCurl(hljs);
+hljs.initHighlightingOnLoad();
+```
 
-Rename and update the unit test `spec/language-spec.js` to test your new language. Edit `input.txt` to cover specific test cases for your language. The code doesn't have to be real working code, but it does have to fully test your language constructs and keywords. Edit `expected.txt` to hold the anticipated correct highlighting HTML.
+Mark the code you want to highlight with the curl class:
 
-Run the test with `npm test`.
+```html
+<pre><code class="curl">...</code></pre>
+```
 
-Once your language is working as expected, create an new language issue and a pull request at https://github.com/highlightjs/highlight.js/issues.
+or use JavaScript to dynamically highlight text:
+
+```javascript
+hljs.registerLanguage('curl', window.hljsDefineArcade);
+var highlighted = hljs.highlightAuto(text, ["curl"]);
+```
+
+## Contributing
+
+[Contributions welcome](https://github.com/esri/contributing). Download this repo and install the dependencies:
+
+```bash
+npm install
+```
+
+Update `curl.js`. Be sure to update the test data `input.txt` to include a test for your changes, or create a new test in `curl-spec.js`. The tests must pass!
+
+```bash
+npm test
+```
+
+Issue a pull request.
+
+## License
+
+Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) (the "License"); you may not use this file except in compliance with the License.

@@ -1,19 +1,18 @@
 const hljs = require("highlight.js/lib/highlight");
-const { definer: language } = require("../language");
+const { definer: curl } = require("../curl");
 const fs = require("fs");
 const path = require("path");
-hljs.registerLanguage("language", language);
+hljs.registerLanguage("curl", curl);
 
 describe("respec-highlight bundle", () => {
-  it("defines language", () => {
+  it("defines curl", () => {
 
-    // highlight has language defined
-    const language = hljs.getLanguage("language");
-    expect(language).toBeDefined();
-
+    // highlight has curl defined
+    const curl = hljs.getLanguage("curl");
+    expect(curl).toBeDefined();
   });
 
-  it("highlights language", () => {
+  it("highlights curl", () => {
 
     // read the test data
     const input = fs.readFileSync(
@@ -23,9 +22,9 @@ describe("respec-highlight bundle", () => {
 
     // highlight the test data
     const { value: result, language } = hljs.highlightAuto(input, [
-      "language",
+      "curl",
     ]);
-    expect(language).toBe("language");
+    expect(language).toBe("curl");
 
     // verify the highlighting is what is expected
     const expected = fs.readFileSync(

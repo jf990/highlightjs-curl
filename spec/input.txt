@@ -1,8 +1,1 @@
-/* Highlight.js test for some new language */
-function myFunction(parameter) {
-    if (parameter != -1) {
-        return parameter;
-    } else {
-        return 0;
-    }
-}
+curl -u ftpuser:ftppass --proxy-header --range 3 -H "Auth: bearer 1234" --header "Accept: ascii" -O ftp://any.domain.com/public/xss.html

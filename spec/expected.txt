@@ -1,8 +1,1 @@
-<span class="hljs-comment">/* Highlight.js test for some new language */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">parameter</span>) </span>{
-    <span class="hljs-keyword">if</span> (parameter != <span class="hljs-number">-1</span>) {
-        <span class="hljs-keyword">return</span> parameter;
-    } <span class="hljs-keyword">else</span> {
-        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-    }
-}
+<span class="hljs-keyword">curl</span> <span class="hljs-literal">-u</span> ftpuser:ftppass <span class="hljs-literal">--proxy-header</span> <span class="hljs-literal">--range</span> <span class="hljs-number">3</span> <span class="hljs-literal">-H</span> <span class="hljs-string">"Auth: bearer 1234"</span> <span class="hljs-literal">--header</span> <span class="hljs-string">"Accept: ascii"</span> <span class="hljs-literal">-O</span> ftp://any.domain.com/public/xss.html
