@@ -5,7 +5,8 @@
   "description": "Support for using highlight.js to syntax highlight cURL commands.",
   "main": "curl.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "build": "terser curl.js -c -o ./dist/curl.min.js"
   },
   "files": [
     "curl.js"
